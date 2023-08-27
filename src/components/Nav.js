@@ -1,10 +1,10 @@
 import React from "react";
 
-const Nav = () => {
+const Nav = ({ classes }) => {
   return (
-    <nav>
+    <nav id="mainNav" className={classes}>
       <ul>
-        <li>
+        <li className="active">
           <a href="/">Home</a>
         </li>
         <li>
