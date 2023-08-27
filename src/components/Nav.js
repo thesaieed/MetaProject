@@ -1,8 +1,8 @@
 import React from "react";
 
-const Nav = ({ classes }) => {
+const Nav = ({ classes, id }) => {
   return (
-    <nav id="mainNav" className={classes}>
+    <nav id={id} className={classes}>
       <ul>
         <li className="active">
           <a href="/">Home</a>

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header>
       <img src={logo} alt="logo" height={50} />
-      <Nav classes={menuClicked ? "showMenu" : ""} />
+      <Nav id="mainNav" classes={menuClicked ? "showMenu" : ""} />
       <span className="hamMenu">
         {!menuClicked && (
           <AiOutlineMenu

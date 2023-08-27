@@ -19,7 +19,7 @@ const Footer = () => {
         </section>
         <section>
           <span>sitemap</span>
-          <Nav />
+          <Nav id="footerNav" />
         </section>
 
         <section>
