@@ -4,7 +4,7 @@ const Nav = ({ classes, id }) => {
   return (
     <nav id={id} className={classes}>
       <ul>
-        <li className="active">
+        <li>
           <a href="/">Home</a>
         </li>
         <li>

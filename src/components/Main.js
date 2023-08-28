@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/styles/mainStyle.css";
 import restFood from "../assets/restauranfood.jpg";
 import greekSalad from "../assets/greek salad.jpg";
@@ -13,6 +14,7 @@ import brandon from "../assets/Brandon.jpg";
 import workers1 from "../assets/Mario and Adrian A.jpg";
 import workers2 from "../assets/Mario and Adrian b.jpg";
 const Main = () => {
+  const navigate = useNavigate();
   const testimonialCard = (img, name, rating, review, alt) => {
     return (
       <div className="card">
@@ -66,7 +68,9 @@ const Main = () => {
               We are a family owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist.
             </p>
-            <button>Reserve a Table</button>
+            <button onClick={() => navigate("/booking")}>
+              Reserve a Table
+            </button>
           </div>
           <img src={restFood} alt="Restaurant food"></img>
         </div>
