@@ -13,6 +13,48 @@ import brandon from "../assets/Brandon.jpg";
 import workers1 from "../assets/Mario and Adrian A.jpg";
 import workers2 from "../assets/Mario and Adrian b.jpg";
 const Main = () => {
+  const testimonialCard = (img, name, rating, review, alt) => {
+    return (
+      <div className="card">
+        <div className="cover">
+          <img src={img} alt={alt}></img>
+          <h4>{name}</h4>
+        </div>
+        <div className="body">
+          <StarRatings
+            rating={rating}
+            starDimension="16px"
+            starSpacing="1px"
+            starRatedColor="orange"
+            numberOfStars={5}
+            name="rating"
+          />
+
+          <p>{review}</p>
+        </div>
+      </div>
+    );
+  };
+  const specialsCard = (img, alt, name, price, info) => {
+    return (
+      <div className="card">
+        <div className="cover">
+          <img src={img} alt={alt}></img>
+        </div>
+        <div className="body">
+          <div>
+            <span>{name}</span>
+            <span id="price">${price}</span>
+          </div>
+          <p>{info}</p>
+          <p>
+            Order a delivery
+            <RiEBike2Fill style={{ marginLeft: 5, marginBottom: -2 }} />
+          </p>
+        </div>
+      </div>
+    );
+  };
   return (
     <main>
       <section id="hero">
@@ -36,65 +78,27 @@ const Main = () => {
             <button> Order Online</button>
           </div>
           <div id="row1">
-            <div className="card">
-              <div className="cover">
-                <img src={greekSalad} alt="greek Salad"></img>
-              </div>
-              <div className="body">
-                <div>
-                  <span>Greek Salad</span>
-                  <span id="price">$12.99</span>
-                </div>
-                <p>
-                  The famous greek salad Of crispy lettuce, peppers, olives and
-                  our Chicago style feta cheese, garnished with crunchy garlic
-                  and rosemary croutons.
-                </p>
-                <p>
-                  Order a delivery
-                  <RiEBike2Fill style={{ marginLeft: 5, marginBottom: -2 }} />
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cover">
-                <img src={bruschetta} alt="Bruschetta"></img>
-              </div>
-              <div className="body">
-                <div>
-                  <span>Bruschetta</span>
-                  <span id="price">$5.99</span>
-                </div>
-                <p>
-                  Our Bruschetta is made from grilled bread that has been
-                  smeared with garlic and seasoned with salt and olive oil.
-                </p>
-                <p>
-                  Order a delivery
-                  <RiEBike2Fill style={{ marginLeft: 5, marginBottom: -2 }} />
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cover">
-                <img src={lemonDesert} alt="Lemon Desert"></img>
-              </div>
-              <div className="body">
-                <div>
-                  <span>Lemon Desert</span>
-                  <span id="price">$5.00</span>
-                </div>
-                <p>
-                  This comes straight from grandma's recipe book, every last
-                  ingredient has been sourced and is as authentic as can be
-                  imagined.
-                </p>
-                <p>
-                  Order a delivery
-                  <RiEBike2Fill style={{ marginLeft: 5, marginBottom: -2 }} />
-                </p>
-              </div>
-            </div>
+            {specialsCard(
+              greekSalad,
+              "Greek Salad",
+              "Greek Salad",
+              "12.99",
+              "The famous greek salad Of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+            )}
+            {specialsCard(
+              bruschetta,
+              "Bruschetta",
+              "Bruschetta",
+              "12.99",
+              " Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
+            )}
+            {specialsCard(
+              lemonDesert,
+              "Greek Salad",
+              "Greek Salad",
+              "5.99",
+              "The famous greek salad Of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+            )}
           </div>
         </div>
       </section>
@@ -102,94 +106,34 @@ const Main = () => {
         <div className="container">
           <h1>What people say about us!</h1>
           <div className="row">
-            <div className="card">
-              <div className="cover">
-                <img src={maria} alt="maria"></img>
-                <h4>Maria Sanchez</h4>
-              </div>
-              <div className="body">
-                <StarRatings
-                  rating={4}
-                  starDimension="16px"
-                  starSpacing="1px"
-                  starRatedColor="orange"
-                  numberOfStars={5}
-                  name="rating"
-                />
-
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua."
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cover">
-                <img src={antony} alt="Antony"></img>
-                <h4>Antony Clifton</h4>
-              </div>
-              <div className="body">
-                <StarRatings
-                  rating={4}
-                  starDimension="16px"
-                  starSpacing="1px"
-                  starRatedColor="orange"
-                  numberOfStars={5}
-                  name="rating"
-                />
-
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua."
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cover">
-                <img src={tamika} alt="Tamika"></img>
-                <h4>Tamika Jackson</h4>
-              </div>
-              <div className="body">
-                <StarRatings
-                  rating={4}
-                  starDimension="16px"
-                  starSpacing="1px"
-                  starRatedColor="orange"
-                  numberOfStars={5}
-                  name="rating"
-                />
-
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua."
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <div className="cover">
-                <img src={brandon} alt="Brandon"></img>
-                <h4>Brandon Ming</h4>
-              </div>
-              <div className="body">
-                <StarRatings
-                  rating={4}
-                  starDimension="16px"
-                  starSpacing="1px"
-                  starRatedColor="orange"
-                  numberOfStars={5}
-                  name="rating"
-                />
-
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua."
-                </p>
-              </div>
-            </div>
+            {testimonialCard(
+              maria,
+              "Maria Sanchez",
+              4,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "maria"
+            )}
+            {testimonialCard(
+              antony,
+              "Antony Clifton",
+              5,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Antony"
+            )}
+            {testimonialCard(
+              tamika,
+              "Tamika Jackson",
+              3,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Tamika"
+            )}
+            {testimonialCard(
+              brandon,
+              "Brandon Ming",
+              5,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Brandon"
+            )}
           </div>
         </div>
       </section>

@@ -264,6 +264,7 @@ button:hover {
   padding: 20px;
   line-height: 25px;
   color: #495e57;
+  text-align: justify;
 }
 
 #info #infoinfo h1 {
