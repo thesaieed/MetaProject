@@ -10,7 +10,9 @@ const Header = () => {
   };
   return (
     <header>
-      <img src={logo} alt="logo" height={50} />
+      <a href="/">
+        <img src={logo} alt="logo" height={50} />
+      </a>
       <Nav id="mainNav" classes={menuClicked ? "showMenu" : ""} />
       <span className="hamMenu">
         {!menuClicked && (

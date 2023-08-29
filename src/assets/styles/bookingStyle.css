@@ -1,0 +1,42 @@
+#booking {
+  color: #495e57;
+}
+#booking form {
+  min-width: 30%;
+}
+#booking label {
+  margin-bottom: -15px;
+}
+#booking input,
+#booking select {
+  padding: 5px;
+  margin: 0;
+  letter-spacing: 1px;
+  border: 1px solid #495e57;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+#booking input:hover,
+#booking select:hover {
+  border: 2px solid #495e57;
+}
+#booking .Inputgroup {
+  display: grid;
+}
+#booking #submit {
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+#booking #submit:hover {
+  border: 1px solid #a18702;
+}

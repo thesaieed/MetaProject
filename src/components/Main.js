@@ -79,7 +79,10 @@ const Main = () => {
         <div className="container">
           <div id="row">
             <span>Specials</span>
-            <button> Order Online</button>
+            <button onClick={() => navigate("/orderonline")}>
+              {" "}
+              Order Online
+            </button>
           </div>
           <div id="row1">
             {specialsCard(

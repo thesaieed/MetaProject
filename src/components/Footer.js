@@ -45,13 +45,19 @@ const Footer = () => {
           <span>Social Media</span>
           <ul className="social-links">
             <li>
-              <FaFacebook style={{ marginRight: 5 }} />
+              <a href="http://www.facebook.com">
+                <FaFacebook style={{ marginRight: 5 }} color="white" />
+              </a>
             </li>
             <li>
-              <FaInstagram style={{ marginRight: 5 }} />
+              <a href="http://www.instagram.com">
+                <FaInstagram style={{ marginRight: 5 }} color="white" />
+              </a>
             </li>
             <li>
-              <FaSquareTwitter style={{ marginRight: 5 }} />
+              <a href="http://www.twitter.com">
+                <FaSquareTwitter style={{ marginRight: 5 }} color="white" />
+              </a>
             </li>
           </ul>
         </section>
